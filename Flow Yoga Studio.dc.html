@@ -39,8 +39,10 @@
 <div style="position:relative; overflow-x:hidden; background:var(--bg-page); font-family:var(--font-body); color:var(--text-primary);">
 
 <section id="top" style="position:relative; height:100vh; min-height:560px; max-height:920px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
-  <img src="uploads/Gemini_Generated_Image_1d2kge1d2kge1d2k.jpeg" alt="Two women seated in a yoga pose with arms raised, in a wood-floored studio overlooking a green garden" style="position:absolute; inset:-8px; width:calc(100% + 16px); height:calc(100% + 16px); object-fit:cover; object-position:{{ heroImagePosition }}; z-index:0; transform-origin:center; animation:flowKenBurns 20s ease-in-out infinite alternate;">
-  <div style="position:absolute; inset:-8px; z-index:1; pointer-events:none; background:{{ heroOverlayGradient }};"></div>
+  <div style="position:absolute; inset:-8px; overflow:hidden; z-index:0;">
+    <img src="uploads/Gemini_Generated_Image_1d2kge1d2kge1d2k.jpeg" alt="Two women seated in a yoga pose with arms raised, in a wood-floored studio overlooking a green garden" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:{{ heroImagePosition }}; transform-origin:center; animation:flowKenBurns 20s ease-in-out infinite alternate;">
+  </div>
+  <div style="position:absolute; inset:0; z-index:1; pointer-events:none; background:{{ heroOverlayGradient }};"></div>
 
   <header style="position:absolute; top:0; left:0; right:0; z-index:20; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:var(--space-6) clamp(20px,5vw,56px);">
     <sc-if value="{{ showDesktopNav }}" hint-placeholder-val="{{ true }}">
