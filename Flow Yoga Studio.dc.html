@@ -95,8 +95,9 @@
       <div class="flow-reveal flow-lift" style="transition-delay:0ms;">
         <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" dc-props="{{ svcYogaCardProps }}" hint-size="100%,470px" style="width:100%;">
           <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:var(--space-4);">
-            <div style="width:100%; aspect-ratio:1/1;">
+            <div style="width:100%; aspect-ratio:1/1; position:relative;">
               <image-slot id="svc-yoga-photo" shape="rounded" placeholder="Yoga pose in warm natural light" style="width:100%; height:100%;"></image-slot>
+              <div style="position:absolute; inset:0; border-radius:12px; pointer-events:none; background:linear-gradient(to top, rgba(67,72,56,0.42) 0%, rgba(67,72,56,0.08) 45%, rgba(67,72,56,0) 65%);"></div>
             </div>
             <x-import component-from-global-scope="FlowDesignSystem_572c0d.Badge" tone="success" hint-size="90px,26px">Movement</x-import>
             <h3 style="font-family:var(--font-display); font-size:20px; font-weight:var(--weight-medium); color:var(--text-primary); margin:0;">yoga</h3>
@@ -108,8 +109,9 @@
       <div class="flow-reveal flow-lift" style="transition-delay:90ms;">
         <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" dc-props="{{ svcCeremoniesCardProps }}" hint-size="100%,470px" style="width:100%;">
           <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:var(--space-4);">
-            <div style="width:100%; aspect-ratio:1/1;">
+            <div style="width:100%; aspect-ratio:1/1; position:relative;">
               <image-slot id="svc-ceremonies-photo" shape="rounded" placeholder="Ritual objects on a woven mat" style="width:100%; height:100%;"></image-slot>
+              <div style="position:absolute; inset:0; border-radius:12px; pointer-events:none; background:linear-gradient(to top, rgba(110,65,40,0.42) 0%, rgba(110,65,40,0.08) 45%, rgba(110,65,40,0) 65%);"></div>
             </div>
             <x-import component-from-global-scope="FlowDesignSystem_572c0d.Badge" tone="accent" hint-size="90px,26px">Ritual</x-import>
             <h3 style="font-family:var(--font-display); font-size:20px; font-weight:var(--weight-medium); color:var(--text-primary); margin:0;">ceremonies</h3>
@@ -121,8 +123,9 @@
       <div class="flow-reveal flow-lift" style="transition-delay:180ms;">
         <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" dc-props="{{ svcMeditationsCardProps }}" hint-size="100%,470px" style="width:100%;">
           <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:var(--space-4);">
-            <div style="width:100%; aspect-ratio:1/1;">
+            <div style="width:100%; aspect-ratio:1/1; position:relative;">
               <image-slot id="svc-meditations-photo" shape="rounded" placeholder="Candles and hands in soft light" style="width:100%; height:100%;"></image-slot>
+              <div style="position:absolute; inset:0; border-radius:12px; pointer-events:none; background:linear-gradient(to top, rgba(91,116,130,0.42) 0%, rgba(91,116,130,0.08) 45%, rgba(91,116,130,0) 65%);"></div>
             </div>
             <x-import component-from-global-scope="FlowDesignSystem_572c0d.Badge" tone="info" hint-size="90px,26px">Stillness</x-import>
             <h3 style="font-family:var(--font-display); font-size:20px; font-weight:var(--weight-medium); color:var(--text-primary); margin:0;">meditations</h3>
@@ -140,8 +143,9 @@
 
     <sc-if value="{{ aboutStacked }}" hint-placeholder-val="{{ false }}">
       <div class="flow-reveal">
-        <div style="width:100%; aspect-ratio:4/3;">
+        <div style="width:100%; aspect-ratio:4/3; position:relative;">
           <image-slot id="about-photo" shape="rounded" placeholder="Studio interior — wood floors, garden view" style="width:100%; height:100%;"></image-slot>
+          <div style="position:absolute; inset:0; border-radius:12px; pointer-events:none; background:linear-gradient(to top, rgba(36,28,21,0.38) 0%, rgba(36,28,21,0.05) 45%, rgba(36,28,21,0) 65%);"></div>
         </div>
         <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" dc-props="{{ aboutCardProps }}" hint-size="100%,320px" style="width:100%;">
           <div style="font-family:var(--font-body); font-size:12px; letter-spacing:var(--tracking-wide); text-transform:uppercase; color:var(--accent-secondary); margin-bottom:12px;">Our Studio</div>
@@ -154,8 +158,9 @@
 
     <sc-if value="{{ aboutOverlap }}" hint-placeholder-val="{{ true }}">
       <div class="flow-reveal" style="position:relative;">
-        <div style="width:100%; aspect-ratio:16/10;">
+        <div style="width:100%; aspect-ratio:16/10; position:relative;">
           <image-slot id="about-photo" shape="rounded" placeholder="Studio interior — wood floors, garden view" style="width:100%; height:100%;"></image-slot>
+          <div style="position:absolute; inset:0; border-radius:12px; pointer-events:none; background:linear-gradient(to top, rgba(36,28,21,0.38) 0%, rgba(36,28,21,0.05) 45%, rgba(36,28,21,0) 65%);"></div>
         </div>
         <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" dc-props="{{ aboutCardProps }}" hint-size="420px,320px" style="position:absolute; right:clamp(16px,5%,64px); top:50%; transform:translateY(-50%); width:min(420px,44%);">
           <div style="font-family:var(--font-body); font-size:12px; letter-spacing:var(--tracking-wide); text-transform:uppercase; color:var(--accent-secondary); margin-bottom:12px;">Our Studio</div>
