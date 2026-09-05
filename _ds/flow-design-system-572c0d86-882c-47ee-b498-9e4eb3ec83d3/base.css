@@ -1,0 +1,9 @@
+*,*::before,*::after{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--bg-page);color:var(--text-primary);font-family:var(--font-body);font-size:var(--text-base);line-height:var(--leading-normal);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--weight-medium);line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);margin:0}
+p{margin:0}
+a{color:var(--text-link);text-decoration:none}
+a:hover{color:var(--text-link-hover);text-decoration:underline}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
+img{max-width:100%;display:block}

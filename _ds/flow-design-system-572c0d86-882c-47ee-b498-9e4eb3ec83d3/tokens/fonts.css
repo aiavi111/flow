@@ -1,0 +1,13 @@
+/* No brand font files were supplied with this project — Newsreader + Public Sans stand in as the
+   closest Google Fonts match to a warm literary serif + clean humanist sans. Flag: ask the user for
+   real brand font files if they have licensed type, then replace this file with local @font-face
+   rules pointing at assets/fonts/. Served via jsDelivr's Fontsource mirror (same files Google Fonts
+   ships, stable CDN URLs, real @font-face so this system's font tokens resolve statically). */
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/newsreader@latest/latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:500;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/newsreader@latest/latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:600;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/newsreader@latest/latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/newsreader@latest/latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Public Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/public-sans@latest/latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Public Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/public-sans@latest/latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Public Sans';font-style:normal;font-weight:600;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/public-sans@latest/latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Public Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/public-sans@latest/latin-700-normal.woff2) format('woff2')}

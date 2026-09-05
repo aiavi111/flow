@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/flow-design-system-572c0d86-882c-47ee-b498-9e4eb3ec83d3/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/flow-design-system-572c0d86-882c-47ee-b498-9e4eb3ec83d3/tokens/colors.css">
+<link rel="stylesheet" href="_ds/flow-design-system-572c0d86-882c-47ee-b498-9e4eb3ec83d3/tokens/typography.css">
+<link rel="stylesheet" href="_ds/flow-design-system-572c0d86-882c-47ee-b498-9e4eb3ec83d3/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/flow-design-system-572c0d86-882c-47ee-b498-9e4eb3ec83d3/tokens/radius.css">
+<link rel="stylesheet" href="_ds/flow-design-system-572c0d86-882c-47ee-b498-9e4eb3ec83d3/tokens/shadow.css">
+<link rel="stylesheet" href="_ds/flow-design-system-572c0d86-882c-47ee-b498-9e4eb3ec83d3/tokens/motion.css">
+<link rel="stylesheet" href="_ds/flow-design-system-572c0d86-882c-47ee-b498-9e4eb3ec83d3/base.css">
+<link rel="stylesheet" href="_ds/flow-design-system-572c0d86-882c-47ee-b498-9e4eb3ec83d3/styles.css">
+<script src="_ds/flow-design-system-572c0d86-882c-47ee-b498-9e4eb3ec83d3/_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  @keyframes flowFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="position:relative; overflow-x:hidden; background:var(--bg-page); font-family:var(--font-body); color:var(--text-primary);">
+
+<section id="top" style="position:relative; height:100vh; min-height:560px; max-height:920px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+  <img src="uploads/Gemini_Generated_Image_1d2kge1d2kge1d2k.jpeg" alt="Two women seated in a yoga pose with arms raised, in a wood-floored studio overlooking a green garden" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:{{ heroImagePosition }}; z-index:0;">
+  <div style="position:absolute; inset:0; z-index:1; pointer-events:none; background:{{ heroOverlayGradient }};"></div>
+
+  <header style="position:absolute; top:0; left:0; right:0; z-index:20; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:var(--space-6) clamp(20px,5vw,56px);">
+    <sc-if value="{{ showDesktopNav }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex; gap:var(--space-8); flex:1;">
+        <a href="#services" style="font-family:var(--font-body); font-size:14px; color:var(--text-inverse); text-shadow:0 1px 5px rgba(0,0,0,0.4);" style-hover="text-decoration:underline;" style-focus="outline:2px solid var(--stone-50); outline-offset:3px;">Courses</a>
+        <a href="#about" style="font-family:var(--font-body); font-size:14px; color:var(--text-inverse); text-shadow:0 1px 5px rgba(0,0,0,0.4);" style-hover="text-decoration:underline;" style-focus="outline:2px solid var(--stone-50); outline-offset:3px;">About Us</a>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleMenu }}" aria-label="Toggle menu" style="flex:1; display:flex; justify-content:flex-start; background:none; border:none; padding:6px; margin:0; cursor:pointer;" style-focus="outline:2px solid var(--stone-50); outline-offset:3px;">
+        <svg width="22" height="14" viewBox="0 0 22 14" fill="none" style="filter:drop-shadow(0 1px 4px rgba(0,0,0,0.4));"><line x1="0" y1="1" x2="22" y2="1" stroke="#fbf8f3" stroke-width="1.6"></line><line x1="0" y1="7" x2="22" y2="7" stroke="#fbf8f3" stroke-width="1.6"></line><line x1="0" y1="13" x2="22" y2="13" stroke="#fbf8f3" stroke-width="1.6"></line></svg>
+      </button>
+    </sc-if>
+
+    <a href="#top" style="font-family:var(--font-display); font-style:italic; font-weight:var(--weight-medium); font-size:24px; color:var(--text-inverse); text-shadow:0 1px 6px rgba(0,0,0,0.4); flex:0 0 auto; white-space:nowrap;" style-focus="outline:2px solid var(--stone-50); outline-offset:3px;">flow</a>
+
+    <div style="flex:1; display:flex; justify-content:flex-end;">
+      <x-import component-from-global-scope="FlowDesignSystem_572c0d.Button" dc-props="{{ bookClassProps }}" hint-size="150px,44px">Book class</x-import>
+    </div>
+  </header>
+
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute; top:82px; left:20px; right:20px; z-index:25; background:var(--bg-surface); border-radius:var(--radius-md); padding:var(--space-6); display:flex; flex-direction:column; gap:var(--space-5); box-shadow:var(--shadow-lg);">
+      <a href="#services" onClick="{{ closeMenu }}" style="font-family:var(--font-body); font-size:15px; color:var(--text-primary);">Courses</a>
+      <a href="#about" onClick="{{ closeMenu }}" style="font-family:var(--font-body); font-size:15px; color:var(--text-primary);">About Us</a>
+    </div>
+  </sc-if>
+
+  <div style="position:relative; z-index:15; text-align:center; padding:0 24px; max-width:900px;">
+    <h1 style="font-family:var(--font-display); font-weight:var(--weight-medium); font-size:clamp(30px,5.6vw,58px); line-height:var(--leading-tight); color:var(--text-inverse); margin:0 0 22px; text-shadow:0 3px 16px rgba(0,0,0,0.32); text-wrap:pretty;">Find Your <span style="font-style:italic;">Flow</span>,<br>Balance Your Hormones.</h1>
+    <a href="#services" style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-body); font-size:14px; color:var(--text-inverse); text-shadow:0 1px 5px rgba(0,0,0,0.35); border-bottom:1px solid rgba(251,248,243,0.55); padding-bottom:5px;" style-hover="border-color:var(--stone-50);" style-focus="outline:2px solid var(--stone-50); outline-offset:4px;">Discover courses <x-import component-from-global-scope="FlowDesignSystem_572c0d.Icon" name="arrow-right" size="{{ iconSm }}" color="var(--stone-50)" hint-size="14px,14px"></x-import></a>
+  </div>
+
+  <a href="#services" aria-label="Scroll to services" style="position:absolute; bottom:30px; left:50%; transform:translateX(-50%); z-index:15; animation:flowFloat 2.4s ease-in-out infinite; filter:drop-shadow(0 2px 6px rgba(0,0,0,0.35));">
+    <x-import component-from-global-scope="FlowDesignSystem_572c0d.Icon" name="chevron-down" size="{{ iconMd }}" color="var(--stone-50)" hint-size="22px,22px"></x-import>
+  </a>
+</section>
+
+<section id="services" style="background:var(--bg-page); padding:var(--space-24) clamp(20px,5vw,56px) var(--space-20);">
+  <div style="max-width:1280px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:var(--space-8);">
+
+    <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" hint-size="100%,440px" style="width:100%;">
+      <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:var(--space-5);">
+        <div style="width:100%; aspect-ratio:1/1;">
+          <image-slot id="svc-yoga-photo" shape="rounded" placeholder="Yoga pose in warm natural light" style="width:100%; height:100%;"></image-slot>
+        </div>
+        <h3 style="font-family:var(--font-display); font-size:20px; font-weight:var(--weight-medium); color:var(--text-primary); margin:0;">yoga</h3>
+        <x-import component-from-global-scope="FlowDesignSystem_572c0d.Button" dc-props="{{ readMoreProps }}" hint-size="140px,44px">Read more</x-import>
+      </div>
+    </x-import>
+
+    <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" hint-size="100%,440px" style="width:100%;">
+      <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:var(--space-5);">
+        <div style="width:100%; aspect-ratio:1/1;">
+          <image-slot id="svc-ceremonies-photo" shape="rounded" placeholder="Ritual objects on a woven mat" style="width:100%; height:100%;"></image-slot>
+        </div>
+        <h3 style="font-family:var(--font-display); font-size:20px; font-weight:var(--weight-medium); color:var(--text-primary); margin:0;">ceremonies</h3>
+        <x-import component-from-global-scope="FlowDesignSystem_572c0d.Button" dc-props="{{ readMoreProps }}" hint-size="140px,44px">Read more</x-import>
+      </div>
+    </x-import>
+
+    <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" hint-size="100%,440px" style="width:100%;">
+      <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:var(--space-5);">
+        <div style="width:100%; aspect-ratio:1/1;">
+          <image-slot id="svc-meditations-photo" shape="rounded" placeholder="Candles and hands in soft light" style="width:100%; height:100%;"></image-slot>
+        </div>
+        <h3 style="font-family:var(--font-display); font-size:20px; font-weight:var(--weight-medium); color:var(--text-primary); margin:0;">meditations</h3>
+        <x-import component-from-global-scope="FlowDesignSystem_572c0d.Button" dc-props="{{ readMoreProps }}" hint-size="140px,44px">Read more</x-import>
+      </div>
+    </x-import>
+
+  </div>
+</section>
+
+<section id="about" style="background:var(--bg-page); padding:var(--space-4) clamp(20px,5vw,56px) var(--space-24);">
+  <div style="max-width:1280px; margin:0 auto;">
+
+    <sc-if value="{{ aboutStacked }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div style="width:100%; aspect-ratio:4/3;">
+          <image-slot id="about-photo" shape="rounded" placeholder="Studio interior — wood floors, garden view" style="width:100%; height:100%;"></image-slot>
+        </div>
+        <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" dc-props="{{ aboutCardProps }}" hint-size="100%,320px" style="width:100%;">
+          <h2 style="font-family:var(--font-display); font-weight:var(--weight-medium); font-size:clamp(24px,3.4vw,30px); line-height:var(--leading-snug); color:var(--text-primary); margin:0 0 18px; text-wrap:pretty;">a nurturing space where yoga meets hormonal <span style="font-style:italic;">harmony</span>.</h2>
+          <p style="font-family:var(--font-body); font-size:15px; line-height:var(--leading-relaxed); color:var(--text-secondary); margin:0 0 22px;">Welcome to Flow Yoga Studio, where every practice is designed to support your unique rhythm. Specializing in hormone-balancing yoga, we help you reconnect with your body and ease the challenges of menstrual cycles, perimenopause, and beyond. At Flow, every breath leads to better balance and self-care.</p>
+          <a href="#" style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-body); font-size:14px; color:var(--accent-primary);" style-hover="color:var(--accent-primary-hover); text-decoration:underline;">Read about our story <x-import component-from-global-scope="FlowDesignSystem_572c0d.Icon" name="arrow-right" size="{{ iconSm }}" color="var(--accent-primary)" hint-size="14px,14px"></x-import></a>
+        </x-import>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ aboutOverlap }}" hint-placeholder-val="{{ true }}">
+      <div style="position:relative;">
+        <div style="width:100%; aspect-ratio:16/10;">
+          <image-slot id="about-photo" shape="rounded" placeholder="Studio interior — wood floors, garden view" style="width:100%; height:100%;"></image-slot>
+        </div>
+        <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" dc-props="{{ aboutCardProps }}" hint-size="420px,320px" style="position:absolute; right:clamp(16px,5%,64px); top:50%; transform:translateY(-50%); width:min(420px,44%);">
+          <h2 style="font-family:var(--font-display); font-weight:var(--weight-medium); font-size:clamp(24px,3vw,32px); line-height:var(--leading-snug); color:var(--text-primary); margin:0 0 18px; text-wrap:pretty;">a nurturing space where yoga meets hormonal <span style="font-style:italic;">harmony</span>.</h2>
+          <p style="font-family:var(--font-body); font-size:15px; line-height:var(--leading-relaxed); color:var(--text-secondary); margin:0 0 22px;">Welcome to Flow Yoga Studio, where every practice is designed to support your unique rhythm. Specializing in hormone-balancing yoga, we help you reconnect with your body and ease the challenges of menstrual cycles, perimenopause, and beyond. At Flow, every breath leads to better balance and self-care.</p>
+          <a href="#" style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-body); font-size:14px; color:var(--accent-primary);" style-hover="color:var(--accent-primary-hover); text-decoration:underline;">Read about our story <x-import component-from-global-scope="FlowDesignSystem_572c0d.Icon" name="arrow-right" size="{{ iconSm }}" color="var(--accent-primary)" hint-size="14px,14px"></x-import></a>
+        </x-import>
+      </div>
+    </sc-if>
+
+  </div>
+</section>
+
+<section id="pricing" style="background:var(--bg-page); padding:var(--space-6) clamp(20px,5vw,56px) var(--space-24);">
+  <div style="max-width:1280px; margin:0 auto;">
+
+    <div style="text-align:center; margin-bottom:var(--space-16);">
+      <div style="font-family:var(--font-body); font-size:12px; letter-spacing:var(--tracking-wide); text-transform:uppercase; color:var(--accent-secondary); margin-bottom:12px;">Join the</div>
+      <h2 style="font-family:var(--font-display); font-weight:var(--weight-medium); font-size:clamp(30px,4.4vw,46px); color:var(--text-primary); margin:0;"><span style="font-style:italic;">flow</span> community.</h2>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:var(--space-6);">
+
+      <div style="position:relative;">
+        <sc-if value="{{ isDropinFeatured }}" hint-placeholder-val="{{ false }}">
+          <x-import component-from-global-scope="FlowDesignSystem_572c0d.Badge" tone="accent" hint-size="90px,26px" style="position:absolute; top:-12px; right:24px; z-index:2;">Popular</x-import>
+        </sc-if>
+        <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" dc-props="{{ dropinCardProps }}" hint-size="100%,280px" style="width:100%;">
+          <div style="display:flex; flex-direction:column; gap:6px; min-height:190px;">
+            <div style="font-family:var(--font-display); font-size:22px; font-weight:var(--weight-medium); color:var(--stone-50);">drop-in class</div>
+            <div style="font-family:var(--font-body); font-size:40px; font-weight:var(--weight-semibold); color:var(--stone-50); margin:14px 0 0;">$18</div>
+            <div style="font-family:var(--font-body); font-size:13px; color:var(--stone-50); margin-bottom:22px;">per session</div>
+            <x-import component-from-global-scope="FlowDesignSystem_572c0d.Button" dc-props="{{ dropinBtnProps }}" hint-size="140px,44px" style="margin-top:auto; align-self:flex-start;">Sign up</x-import>
+          </div>
+        </x-import>
+      </div>
+
+      <div style="position:relative;">
+        <sc-if value="{{ isTenclassFeatured }}" hint-placeholder-val="{{ false }}">
+          <x-import component-from-global-scope="FlowDesignSystem_572c0d.Badge" tone="accent" hint-size="90px,26px" style="position:absolute; top:-12px; right:24px; z-index:2;">Popular</x-import>
+        </sc-if>
+        <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" dc-props="{{ tenclassCardProps }}" hint-size="100%,280px" style="width:100%;">
+          <div style="display:flex; flex-direction:column; gap:6px; min-height:190px;">
+            <div style="font-family:var(--font-display); font-size:22px; font-weight:var(--weight-medium); color:var(--stone-50);">10-class pack</div>
+            <div style="font-family:var(--font-body); font-size:40px; font-weight:var(--weight-semibold); color:var(--stone-50); margin:14px 0 0;">$150</div>
+            <div style="font-family:var(--font-body); font-size:13px; color:var(--stone-50); margin-bottom:22px;">valid for 3 months</div>
+            <x-import component-from-global-scope="FlowDesignSystem_572c0d.Button" dc-props="{{ tenclassBtnProps }}" hint-size="140px,44px" style="margin-top:auto; align-self:flex-start;">Sign up</x-import>
+          </div>
+        </x-import>
+      </div>
+
+      <div style="position:relative;">
+        <sc-if value="{{ isMonthlyFeatured }}" hint-placeholder-val="{{ false }}">
+          <x-import component-from-global-scope="FlowDesignSystem_572c0d.Badge" tone="accent" hint-size="90px,26px" style="position:absolute; top:-12px; right:24px; z-index:2;">Popular</x-import>
+        </sc-if>
+        <x-import component-from-global-scope="FlowDesignSystem_572c0d.Card" dc-props="{{ monthlyCardProps }}" hint-size="100%,280px" style="width:100%;">
+          <div style="display:flex; flex-direction:column; gap:6px; min-height:190px;">
+            <div style="font-family:var(--font-display); font-size:22px; font-weight:var(--weight-medium); color:var(--stone-900);">monthly unlimited</div>
+            <div style="font-family:var(--font-body); font-size:40px; font-weight:var(--weight-semibold); color:var(--stone-900); margin:14px 0 0;">$110</div>
+            <div style="font-family:var(--font-body); font-size:13px; color:var(--stone-900); margin-bottom:22px;">per month</div>
+            <x-import component-from-global-scope="FlowDesignSystem_572c0d.Button" dc-props="{{ monthlyBtnProps }}" hint-size="140px,44px" style="margin-top:auto; align-self:flex-start;">Sign up</x-import>
+          </div>
+        </x-import>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section style="position:relative; padding:var(--space-32) clamp(20px,5vw,56px); overflow:hidden; display:flex; align-items:center;">
+  <div style="position:absolute; inset:0;">
+    <image-slot id="social-bg-photo" shape="rect" placeholder="Folded linen towels and rolled mats on wooden shelving" style="width:100%; height:100%;" src="./gemini_generated_image_4jg0sa4jg0sa4jg0-mtomth8q-ijyn.jpeg"></image-slot>
+  </div>
+  <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(to bottom, rgba(36,28,21,0.5), rgba(36,28,21,0.28) 40%, rgba(36,28,21,0.5));"></div>
+  <div style="position:relative; z-index:5; max-width:1280px; margin:0 auto; width:100%; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:var(--space-8);">
+    <h2 style="font-family:var(--font-display); font-weight:var(--weight-medium); font-size:clamp(28px,4vw,42px); line-height:var(--leading-snug); color:var(--text-inverse); margin:0; text-shadow:0 2px 10px rgba(0,0,0,0.3);">let's hang on<br>the <span style="font-style:italic;">socials</span>.</h2>
+    <div style="display:flex; gap:var(--space-4); flex-wrap:wrap;">
+      <x-import component-from-global-scope="FlowDesignSystem_572c0d.Button" dc-props="{{ socialBtnProps }}" hint-size="150px,44px">Instagram</x-import>
+      <x-import component-from-global-scope="FlowDesignSystem_572c0d.Button" dc-props="{{ socialBtnProps }}" hint-size="150px,44px">Facebook</x-import>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--stone-900); padding:var(--space-12) clamp(20px,5vw,56px); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:var(--space-6);">
+  <div style="display:flex; gap:var(--space-8); flex:1; min-width:160px;">
+    <a href="#top" style="font-family:var(--font-body); font-size:14px; color:var(--text-inverse);" style-hover="text-decoration:underline;">Home</a>
+    <a href="#pricing" style="font-family:var(--font-body); font-size:14px; color:var(--text-inverse);" style-hover="text-decoration:underline;">Schedule</a>
+  </div>
+  <div style="font-family:var(--font-display); font-size:20px; color:var(--stone-50); text-align:center; flex:0 0 auto;"><span style="font-style:italic;">flow</span> studio</div>
+  <div style="display:flex; gap:var(--space-8); flex:1; min-width:160px; justify-content:flex-end;">
+    <a href="#about" style="font-family:var(--font-body); font-size:14px; color:var(--text-inverse);" style-hover="text-decoration:underline;">About</a>
+    <a href="#" style="font-family:var(--font-body); font-size:14px; color:var(--text-inverse);" style-hover="text-decoration:underline;">Contact</a>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;featuredPlan&quot;: {&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;none&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;none&quot;,&quot;dropin&quot;,&quot;tenclass&quot;,&quot;monthly&quot;],&quot;section&quot;:&quot;Pricing&quot;},
+  &quot;heroOverlayStrength&quot;: {&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.55,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:0,&quot;max&quot;:1,&quot;step&quot;:0.05,&quot;section&quot;:&quot;Hero&quot;},
+  &quot;heroImageFocus&quot;: {&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;center&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;top&quot;,&quot;center&quot;,&quot;bottom&quot;],&quot;section&quot;:&quot;Hero&quot;}
+}">
+class Component extends DCLogic {
+  state = { isMobile: false, menuOpen: false };
+
+  componentDidMount() {
+    this.checkSize();
+    window.addEventListener('resize', this.checkSize);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.checkSize);
+  }
+  checkSize = () => {
+    const isMobile = window.innerWidth < 780;
+    if (isMobile !== this.state.isMobile) this.setState({ isMobile });
+  };
+  scrollToId = (id) => {
+    const el = document.getElementById(id);
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' });
+  };
+
+  renderVals() {
+    const focusMap = { top: 'center 15%', center: 'center 38%', bottom: 'center 65%' };
+    const focus = focusMap[this.props.heroImageFocus] ? this.props.heroImageFocus : 'center';
+    const strength = Math.max(0, Math.min(1, this.props.heroOverlayStrength ?? 0.55));
+    const scale = strength / 0.55;
+    const a = (base) => Math.min(1, base * scale).toFixed(2);
+    const heroOverlayGradient = 'linear-gradient(to bottom, rgba(20,14,9,' + a(0.58) + ') 0%, rgba(20,14,9,' + a(0.30) + ') 30%, rgba(20,14,9,' + a(0.20) + ') 50%, rgba(20,14,9,' + a(0.10) + ') 68%, rgba(20,14,9,' + a(0.05) + ') 80%, rgba(20,14,9,' + a(0.42) + ') 100%)';
+    const featured = this.props.featuredPlan ?? 'none';
+    const isMobile = this.state.isMobile;
+
+    const lightOnColor = { border: '1px solid var(--stone-50)', color: 'var(--stone-50)' };
+    const darkOnColor = { border: '1px solid var(--stone-900)', color: 'var(--stone-900)' };
+
+    return {
+      isMobile: isMobile,
+      showDesktopNav: !isMobile,
+      menuOpen: isMobile && this.state.menuOpen,
+      aboutStacked: isMobile,
+      aboutOverlap: !isMobile,
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      heroImagePosition: focusMap[focus],
+      heroOverlayGradient: heroOverlayGradient,
+      isDropinFeatured: featured === 'dropin',
+      isTenclassFeatured: featured === 'tenclass',
+      isMonthlyFeatured: featured === 'monthly',
+
+      iconSm: 14,
+      iconMd: 22,
+
+      bookClassProps: { variant: 'secondary', size: 'md', icon: 'arrow-right', iconPosition: 'trailing', style: lightOnColor, onClick: () => this.scrollToId('pricing') },
+      readMoreProps: { variant: 'secondary', size: 'md', icon: 'arrow-right', iconPosition: 'trailing' },
+      dropinBtnProps: { variant: 'secondary', size: 'md', icon: 'arrow-right', iconPosition: 'trailing', style: lightOnColor },
+      tenclassBtnProps: { variant: 'secondary', size: 'md', icon: 'arrow-right', iconPosition: 'trailing', style: lightOnColor },
+      monthlyBtnProps: { variant: 'secondary', size: 'md', icon: 'arrow-right', iconPosition: 'trailing', style: darkOnColor },
+      socialBtnProps: { variant: 'secondary', size: 'md', icon: 'arrow-up-right', iconPosition: 'trailing', style: lightOnColor },
+
+      dropinCardProps: { padding: '44px 36px', elevated: true, style: { background: 'var(--clay-600)', border: 'none' } },
+      tenclassCardProps: { padding: '44px 36px', elevated: true, style: { background: 'var(--sage-600)', border: 'none' } },
+      monthlyCardProps: { padding: '44px 36px', elevated: true, style: { background: 'var(--stone-400)', border: 'none' } },
+      aboutCardProps: { padding: 'clamp(32px,4vw,48px) clamp(28px,3.5vw,44px)', elevated: true, style: { background: 'var(--stone-100)' } },
+    };
+  }
+}
+</script>
+</body>
+</html>

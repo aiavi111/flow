@@ -1,0 +1,73 @@
+:root{
+/* stone — warm neutral scale, paper to ink (sampled from studio photo: light oak floor, plaster walls, dark umber wood) */
+--stone-50:#fbf8f3;
+--stone-100:#f5eee3;
+--stone-200:#ece0ce;
+--stone-300:#ddcbae;
+--stone-400:#c3ad87;
+--stone-500:#a38a66;
+--stone-600:#816b4c;
+--stone-700:#5f4d38;
+--stone-800:#3d3226;
+--stone-900:#241c15;
+
+/* clay — primary accent, from the terracotta practicewear in the photo */
+--clay-100:#f4e2d3;
+--clay-200:#e7c2a3;
+--clay-300:#d69e71;
+--clay-400:#c17f51;
+--clay-500:#ad6b41;
+--clay-600:#8f5636;
+--clay-700:#6e4128;
+
+/* sage — secondary accent, from the garden greenery through the window */
+--sage-100:#e9ebe1;
+--sage-200:#d1d6c1;
+--sage-300:#aeb69a;
+--sage-400:#8b9575;
+--sage-500:#71785c;
+--sage-600:#595f49;
+--sage-700:#434838;
+
+/* semantic surfaces */
+--bg-page:var(--stone-50);
+--bg-surface:#fffdfa;
+--bg-surface-alt:var(--stone-100);
+--bg-inverse:var(--stone-900);
+--bg-overlay:rgba(36,28,21,.45);
+
+/* semantic text */
+--text-primary:var(--stone-900);
+--text-secondary:var(--stone-700);
+--text-muted:var(--stone-500);
+--text-inverse:var(--stone-50);
+--text-on-accent:#fffdfa;
+--text-link:var(--clay-600);
+--text-link-hover:var(--clay-700);
+
+/* semantic borders */
+--border-subtle:var(--stone-200);
+--border-default:var(--stone-300);
+--border-strong:var(--stone-400);
+
+/* semantic accents */
+--accent-primary:var(--clay-600);
+--accent-primary-hover:var(--clay-700);
+--accent-primary-active:#5a331f;
+--accent-primary-soft:var(--clay-100);
+--accent-secondary:var(--sage-600);
+--accent-secondary-hover:var(--sage-700);
+--accent-secondary-soft:var(--sage-100);
+
+/* semantic status */
+--success:var(--sage-600);
+--success-soft:var(--sage-100);
+--warning:#a9763b;
+--warning-soft:#f3e6d2;
+--error:#9c4433;
+--error-soft:#f3deda;
+--info:#5b7482;
+--info-soft:#e3eaec;
+
+--focus-ring:var(--clay-500);
+}
